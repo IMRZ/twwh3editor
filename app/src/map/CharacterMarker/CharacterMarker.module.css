@@ -1,0 +1,12 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
