@@ -1,4 +1,5 @@
 export * from './init';
+export * from './kill_character';
 export * from './set_region_abandoned';
 export * from './teleport';
 export * from './transfer_region';
