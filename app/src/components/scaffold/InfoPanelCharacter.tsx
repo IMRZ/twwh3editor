@@ -12,6 +12,8 @@ import {
 import CloseButton from '@mui/icons-material/Close';
 import { useAppStore } from '@/api/store';
 
+import { killCharacterDialog } from './character/KillCharacter';
+
 const InfoPanelCharacter = (props: { cqi: number }) => {
   const setSelectedItem = useAppStore((state) => state.setSelectedItem);
   const character = useAppStore((state) =>
@@ -27,8 +29,7 @@ const InfoPanelCharacter = (props: { cqi: number }) => {
   }
 
   const actions = [
-    ['Transfer region', () => {}],
-    ['Abandon region', () => {}],
+    ['Kill character', () => killCharacterDialog(character)],
   ] as any[];
 
   return (
@@ -40,13 +41,13 @@ const InfoPanelCharacter = (props: { cqi: number }) => {
         </IconButton>
       </Box>
       <Divider />
-      {/* <List>
+      <List>
         {actions.map(([label, action]) => (
           <ListItem key={label} button onClick={action}>
             <ListItemText primary={label} />
           </ListItem>
         ))}
-      </List> */}
+      </List>
     </>
   );
 };
