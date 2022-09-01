@@ -7,13 +7,18 @@ L.Marker.addInitHook(function() {
     this.on('add', function() {
 
       this._updateIconVisibility = function() {
-        var map = this._map,
-          isVisible = map.getBounds().contains(this.getLatLng()),
-          wasVisible = this._wasVisible,
-          icon = this._icon,
-          iconParent = this._iconParent,
-          shadow = this._shadow,
-          shadowParent = this._shadowParent;
+        let map = this._map;
+
+        if (!map) {
+          return;
+        }
+
+        let isVisible = map.getBounds().contains(this.getLatLng());
+        let wasVisible = this._wasVisible;
+        let icon = this._icon;
+        let iconParent = this._iconParent;
+        let shadow = this._shadow;
+        let shadowParent = this._shadowParent;
 
         // remember parent of icon
         if (!iconParent) {
@@ -38,7 +43,6 @@ L.Marker.addInitHook(function() {
           }
 
           this._wasVisible = isVisible;
-
         }
       };
 
