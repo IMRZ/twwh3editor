@@ -82,8 +82,6 @@ const CharacterMarker = (props: MapMarkerProps) => {
     };
   }, [props.character]);
 
-  console.log('##')
-
   const component =
     props.character.type === 'general' ? (
       <CharacterMarkerLord character={props.character} />
