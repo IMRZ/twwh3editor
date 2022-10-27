@@ -5,3 +5,4 @@ export * from './teleport';
 export * from './transfer_region';
 export * from './diplomacy';
 export * from './shroud';
+export * from './instantly_set_settlement_primary_slot_level';

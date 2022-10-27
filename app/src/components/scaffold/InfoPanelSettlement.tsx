@@ -14,6 +14,7 @@ import { useAppStore } from '@/api/store';
 
 import { regionAbandonDialog } from './region/RegionAbandon';
 import { regionTransferDialog } from './region/RegionTransfer';
+import { regionSettlementSetLevelDialog } from './region/RegionSettlementSetLevel';
 
 const InfoPanelSettlement = (props: { cqi: number }) => {
   const setSelectedItem = useAppStore((state) => state.setSelectedItem);
@@ -43,6 +44,7 @@ const InfoPanelSettlement = (props: { cqi: number }) => {
   const actions = [
     ['Transfer region', () => regionTransferDialog(region)],
     ['Abandon region', () => regionAbandonDialog(region)],
+    ['Set settlement level', () => regionSettlementSetLevelDialog(region)],
   ] as any[];
 
   return (
